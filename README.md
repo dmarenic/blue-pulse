@@ -114,7 +114,7 @@ com.dominik.bluepuls
 
 ### 1. Kloniraj repozitorij
 ```bash
-git clone https://github.com/<korisnicko-ime>/blue-pulse.git
+git clone https://github.com/dmarenic/blue-pulse.git
 cd blue-pulse
 ```
 
