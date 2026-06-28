@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tamna pozadina prozora sprječava bijeli bljesak prije nego Compose iscrta UI. -->
+    <style name="Theme.BluePulse" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/bp_dark</item>
+        <item name="android:statusBarColor">@color/bp_dark</item>
+        <item name="android:navigationBarColor">@color/bp_dark</item>
+        <!-- Tamna traka -> svijetle (bijele) ikone statusne trake. -->
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

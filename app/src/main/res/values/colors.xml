@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Blue Pulse brand boje (koriste se za window background / splash) -->
+    <color name="bp_dark">#001123</color>
+    <color name="bp_primary">#134C95</color>
+    <color name="bp_accent">#B8FF00</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>

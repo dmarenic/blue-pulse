@@ -1,0 +1,60 @@
+rules_version = '2';
+
+// Sigurnosna pravila za Cloud Firestore (Blue Pulse).
+// Deploy: Firebase Console -> Firestore Database -> Rules -> Publish
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Profil korisnika: čitati može svaki prijavljeni; mijenjati samo vlasnik.
+    match /users/{userId} {
+      allow read: if request.auth != null;
+      allow create, update: if request.auth != null && request.auth.uid == userId;
+      allow delete: if false;
+    }
+
+    // Glasovi za igrača mjeseca: document ID MORA biti "{uid}_{period}", čime je
+    // zajamčen najviše jedan glas po korisniku po mjesecu (nije moguće kreirati više
+    // vote-dokumenata istog korisnika za isti period i tako napuhati rezultat).
+    match /votes/{voteId} {
+      allow read: if request.auth != null;
+      allow create, update: if request.auth != null
+                            && request.resource.data.userId == request.auth.uid
+                            && voteId == request.auth.uid + "_" + request.resource.data.period;
+      allow delete: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+
+    // Povijest pobjednika (document ID = period, npr. "2026-05"):
+    // čitaju svi prijavljeni, prijavljeni mogu kreirati zapis, ali se NE smije
+    // mijenjati ni brisati (jednom proglašen pobjednik je konačan).
+    match /player_of_the_month_history/{period} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+      allow update, delete: if false;
+    }
+
+    // Metapodaci fotografija u galeriji.
+    match /photos/{photoId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
+      allow delete: if request.auth != null && resource.data.userId == request.auth.uid;
+      // Update dopušten SAMO za polje "likedBy" i to tako da korisnik dodaje ili
+      // uklanja isključivo SVOJ uid (ne može lajkati u tuđe ime ni napuhati brojač).
+      // get('likedBy', []) -> radi i kad fotografija još nema to polje (prvi lajk).
+      allow update: if request.auth != null
+                    && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likedBy'])
+                    && (
+                         // Lajk: novi popis = stari + (samo) moj uid.
+                         (request.resource.data.get('likedBy', []).hasAll(resource.data.get('likedBy', []))
+                          && request.resource.data.get('likedBy', []).size() == resource.data.get('likedBy', []).size() + 1
+                          && !resource.data.get('likedBy', []).hasAny([request.auth.uid])
+                          && request.resource.data.get('likedBy', []).hasAny([request.auth.uid]))
+                         ||
+                         // Odlajk: stari popis = novi + (samo) moj uid.
+                         (resource.data.get('likedBy', []).hasAll(request.resource.data.get('likedBy', []))
+                          && request.resource.data.get('likedBy', []).size() == resource.data.get('likedBy', []).size() - 1
+                          && !request.resource.data.get('likedBy', []).hasAny([request.auth.uid])
+                          && resource.data.get('likedBy', []).hasAny([request.auth.uid]))
+                       );
+    }
+  }
+}

@@ -1,0 +1,66 @@
+# ============================================================
+#  Blue Pulse — .gitignore (Android / Gradle / Kotlin)
+#
+#  Cilj: profesor klonira repo i ODMAH builda u Android Studiju.
+#  Ignoriramo samo: tajne, generirani build/cache i IDE/OS smeće.
+#  Sve potrebno za build OSTAJE u repozitoriju (vidi dno datoteke).
+# ============================================================
+
+# --- Tajne / lokalne postavke (NIKAD na javni GitHub) ---
+# Sadrži API ključeve (TheSportsDB, Maps, imgbb) i lokalnu putanju SDK-a (sdk.dir).
+# Android Studio ga sam generira pri prvom otvaranju, a build radi i bez njega
+# (ključevi imaju default vrijednosti), pa ovo ne sprječava buildanje.
+local.properties
+
+# Potpisni ključevi (u projektu ih nema, ali defenzivno - nikad ne smiju na GitHub)
+*.jks
+*.keystore
+
+# --- Gradle (generirani cache i build output) ---
+.gradle/
+build/
+.kotlin/
+
+# Native build (nije korišteno u projektu, ali standardno)
+.externalNativeBuild/
+.cxx/
+
+# --- Android Studio / IntelliJ ---
+# Cijeli .idea/ se NE commita: Android Studio ga regenerira iz Gradle datoteka
+# pri "Open", pa kloniranje + build rade normalno. Time izbjegavamo
+# strojno-specificne i privremene IDE postavke.
+.idea/
+*.iml
+captures/
+
+# --- Claude Code (lokalna konfiguracija alata, nije dio projekta) ---
+.claude/
+
+# --- Build artefakti ---
+*.apk
+*.aab
+*.log
+
+# --- Smece operacijskog sustava ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Dokumentacija: privremene / backup datoteke ---
+# Wordove lock/temp datoteke (~$...) i sigurnosna kopija dokumentacije
+~$*
+mobilne_backup.docx
+
+# ============================================================
+#  NAMJERNO SE NE IGNORIRA (potrebno za build / predaju):
+#    gradle/                      (wrapper JAR + libs.versions.toml)
+#    gradlew, gradlew.bat
+#    build.gradle.kts, settings.gradle.kts, gradle.properties
+#    app/build.gradle.kts
+#    app/google-services.json     (Firebase config - build pada bez njega;
+#                                   to je klijentski identifikator, a podaci su
+#                                   zasticeni Firestore pravilima)
+#    app/src/**                   (sav izvorni kod i resursi)
+#    firestore.rules, PROJECT_REPORT.md, mobilne.docx, dijagrami, ikona
+# ============================================================

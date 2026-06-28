@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "44702262603",
+    "project_id": "blue-pulse-40e70",
+    "storage_bucket": "blue-pulse-40e70.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44702262603:android:c10c5040be84694727f4ce",
+        "android_client_info": {
+          "package_name": "com.dominik.bluepuls"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbNIGlmDZAR4Q2kjpz49TWmVU-VZm0n74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,164 @@
+<resources>
+    <string name="app_name">Blue Pulse</string>
+
+    <!-- Auth -->
+    <string name="auth_name">Ime</string>
+    <string name="auth_email">Email</string>
+    <string name="auth_password">Lozinka</string>
+    <string name="auth_confirm_password">Potvrdi lozinku</string>
+    <string name="auth_login">Prijavi se</string>
+    <string name="auth_register">Registriraj se</string>
+    <string name="auth_to_register">Nemaš račun? Registriraj se.</string>
+    <string name="auth_to_login">Već imaš račun? Prijavi se.</string>
+    <string name="auth_logout">Odjava</string>
+
+    <!-- Navigacija -->
+    <string name="nav_home">Početna</string>
+    <string name="nav_matches">Utakmice</string>
+    <string name="nav_stats">Igrači</string>
+    <string name="nav_standings">Tablica</string>
+    <string name="nav_profile">Profil</string>
+
+    <!-- Ljestvica -->
+    <string name="standings_title">HNL Ljestvica</string>
+
+    <!-- Notifikacije -->
+    <string name="notif_channel_name">Podsjetnici za utakmice</string>
+    <string name="notif_channel_desc">Obavijesti o nadolazećim utakmicama Dinama</string>
+    <string name="notif_title">Nadolazeća utakmica! 💙</string>
+    <string name="notif_message_match">%1$s vs %2$s\n%3$s</string>
+    <string name="notif_reminder_button">Podsjeti me na utakmicu</string>
+    <string name="home_reminder_cancel">Otkaži podsjetnik</string>
+    <string name="notif_reminder_set">Podsjetnik je postavljen!</string>
+    <string name="details_set_reminder">🔔  Podsjeti me</string>
+    <string name="details_cancel_reminder">🔕  Otkaži podsjetnik</string>
+    <string name="notif_result_title">Završena utakmica! ⚽</string>
+
+    <!-- Home / Shake -->
+    <string name="home_welcome">Dobrodošli u Blue Pulse!</string>
+    <string name="home_slogan">Bilo kuda — Dinamo svuda</string>
+    <string name="home_shake_hint">Protresi telefon za osvježavanje podataka</string>
+    <string name="shake_refreshing">Osvježavam podatke…</string>
+    <string name="home_next_match">SLJEDEĆA UTAKMICA</string>
+    <string name="home_last_match">ZADNJA UTAKMICA</string>
+    <string name="home_no_matches">Podaci o utakmicama nisu dostupni.</string>
+    <string name="home_action_matches">Sve utakmice</string>
+    <string name="home_action_stadium">Stadion Maksimir</string>
+    <string name="home_action_gallery">Galerija navijača</string>
+
+    <!-- Home / Pozdrav prema statusu sljedeće utakmice -->
+    <string name="home_greeting_matchday">Dan utakmice</string>
+    <string name="home_greeting_tomorrow">Sutra je utakmica</string>
+    <string name="home_greeting_in_days">Sljedeća utakmica za %1$d dana</string>
+    <string name="home_greeting_live">Uživo</string>
+    <string name="home_greeting_full_time">Kraj utakmice</string>
+
+    <!-- Home / Status badge -->
+    <string name="home_status_live">UŽIVO</string>
+    <string name="home_status_today">DANAS</string>
+    <string name="home_status_upcoming">USKORO</string>
+    <string name="home_status_final">ZAVRŠENO</string>
+    <string name="home_countdown_starting">Utakmica uskoro počinje</string>
+    <string name="home_cd_days">DANA</string>
+    <string name="home_cd_hours">SATI</string>
+    <string name="home_cd_mins">MIN</string>
+
+    <!-- Zajednička stanja -->
+    <string name="state_loading">Učitavanje…</string>
+    <string name="state_empty">Nema podataka za prikaz.</string>
+    <string name="state_error">Nešto je pošlo po zlu.</string>
+    <string name="action_retry">Pokušaj ponovno</string>
+
+    <!-- Utakmice -->
+    <string name="matches_title">Utakmice</string>
+    <string name="matches_upcoming">Nadolazeće utakmice</string>
+    <string name="matches_played">Odigrane utakmice</string>
+    <string name="matches_empty_category">Nema utakmica u ovoj kategoriji.</string>
+    <string name="match_home">Domaćin</string>
+    <string name="match_away">Gost</string>
+    <string name="match_date">Datum</string>
+    <string name="match_vs">VS</string>
+    <string name="match_details_title">Detalji utakmice</string>
+    <string name="match_not_found">Utakmica nije pronađena.</string>
+    <string name="match_not_played">Utakmica još nije odigrana</string>
+    <string name="cd_back">Nazad</string>
+    <string name="action_share">Podijeli</string>
+    <string name="action_calendar">Dodaj u kalendar</string>
+
+    <!-- Igrači + Glasanje (objedinjeni ekran) -->
+    <string name="players_title">Igrači Dinama</string>
+    <string name="players_search_hint">Pretraži po imenu ili prezimenu</string>
+    <string name="players_sort_label">Sortiraj:</string>
+    <string name="sort_surname">Prezime</string>
+    <string name="sort_number">Broj</string>
+    <string name="sort_votes">Glasovi</string>
+    <string name="player_number">#%1$d</string>
+    <string name="player_age">%1$d god.</string>
+    <string name="player_detail_title">Profil igrača</string>
+    <string name="player_height">Visina</string>
+    <string name="player_weight">Težina</string>
+    <string name="player_about">O igraču</string>
+    <string name="player_titles_won">Osvojene titule</string>
+    <string name="cd_player_photo">Fotografija igrača</string>
+    <string name="vote_action">Glasaj</string>
+    <string name="vote_my_vote">Tvoj glas ✓</string>
+    <string name="vote_reset">Poništi glas</string>
+    <string name="vote_count">%1$d glasova</string>
+    <string name="vote_results">Rezultati glasanja</string>
+    <string name="vote_results_title">🏆 Rezultati glasanja</string>
+    <string name="vote_results_empty">Još nema glasova. Budi prvi koji će glasati!</string>
+
+    <!-- Igrač mjeseca (proširenje) -->
+    <string name="pom_title">Igrač mjeseca</string>
+    <string name="pom_info_title">Kako funkcionira glasanje?</string>
+    <string name="pom_info_what">Biraš najboljeg Dinamovca ovog mjeseca.</string>
+    <string name="pom_info_once">Svaki prijavljeni korisnik glasa jednom mjesečno.</string>
+    <string name="pom_info_change">Glas možeš promijeniti do kraja mjeseca.</string>
+    <string name="pom_info_winner">Na kraju mjeseca pobjednik se proglašava automatski po broju glasova.</string>
+    <string name="pom_current_title">Trenutni rezultati</string>
+    <string name="pom_total_votes">Ukupno glasova: %1$d</string>
+    <string name="pom_no_votes_yet">Još nema glasova ovaj mjesec. Glasaj na popisu igrača!</string>
+    <string name="pom_history_title">Povijest igrača mjeseca</string>
+    <string name="pom_history_empty">Još nema proglašenih pobjednika.</string>
+    <string name="pom_badge">Igrač mjeseca</string>
+    <string name="pom_votes_of_total">%1$d / %2$d glasova</string>
+    <string name="pom_titles_count">Titule igrača mjeseca: %1$d</string>
+
+    <!-- Karta / Lokacija -->
+    <string name="map_title">Stadion Maksimir</string>
+    <string name="maksimir_snippet">GNK Dinamo Zagreb</string>
+    <string name="map_permission_rationale">Za prikaz tvoje trenutne lokacije na karti potrebna je dozvola za pristup lokaciji.</string>
+    <string name="map_grant_permission">Dozvoli lokaciju</string>
+    <string name="map_center_stadium">Stadion</string>
+    <string name="map_center_me">Moja lokacija</string>
+    <string name="map_directions">🧭  Upute do Maksimira</string>
+    <string name="map_directions_error">Ne mogu otvoriti upute.</string>
+    <string name="map_distance">📏  %1$s km do Maksimira</string>
+
+    <!-- Galerija -->
+    <string name="gallery_title">Galerija navijača</string>
+    <string name="gallery_empty">Još nema fotografija. Budi prvi koji će podijeliti svoju!</string>
+    <string name="gallery_add">Dodaj fotografiju</string>
+    <string name="gallery_caption_hint">Opis (neobavezno)</string>
+    <string name="gallery_publish">Objavi</string>
+    <string name="gallery_cancel">Odustani</string>
+    <string name="gallery_uploading">Uploadam fotografiju…</string>
+    <string name="gallery_delete">Obriši</string>
+    <string name="gallery_delete_title">Obrisati fotografiju?</string>
+    <string name="gallery_delete_confirm">Ova radnja je trajna i ne može se poništiti.</string>
+    <string name="cd_photo">Fotografija navijača</string>
+    <string name="cd_like">Sviđa mi se</string>
+
+    <!-- Profil -->
+    <string name="profile_title">Moj profil</string>
+    <string name="profile_favorite_team">Navijač: %1$s</string>
+    <string name="profile_member_since">Član od %1$s</string>
+    <string name="profile_votes_cast">Danih glasova</string>
+    <string name="profile_photos_uploaded">Uploadanih fotografija</string>
+    <string name="profile_favorite_player">Omiljeni igrač</string>
+    <string name="cd_profile_avatar">Profilna slika</string>
+    <string name="cd_change_avatar">Promijeni profilnu sliku</string>
+    <string name="profile_edit_name">Uredi ime</string>
+    <string name="profile_name_hint">Tvoje ime</string>
+    <string name="profile_save">Spremi</string>
+</resources>
